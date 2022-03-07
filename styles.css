@@ -1,3 +1,26 @@
-body {
-    background-color: beige;
+.title {
+    text-align: center;
+    background-color: goldenrod;
+    padding: 5px;
+    color: white;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-evenly;
+}
+
+.image {
+    height: 50px;
+    width: 50px;
+}
+
+button {
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: seashell;
 }
