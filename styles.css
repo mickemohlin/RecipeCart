@@ -1,13 +1,27 @@
+body {
+    margin: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title-section {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    background-color: darkred;
+}
+
 .title {
-    text-align: center;
-    background-color: goldenrod;
-    padding: 5px;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
     color: white;
+    padding: 10px;
 }
 
 .main-content {
     display: flex;
     flex-direction: row;
+    margin-top: 5%;
     padding: 10px;
     justify-content: space-evenly;
 }
@@ -19,6 +33,8 @@
 
 button {
     border-radius: 5px;
+    height: 200px;
+    width: 120px;
 }
 
 button:hover {
