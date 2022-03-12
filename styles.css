@@ -15,34 +15,29 @@ body {
     margin-top: auto;
     margin-bottom: auto;
     color: white;
-    padding: 10px;
 }
 
-.menu {
-    display: inline-flex;
-    flex-direction: column;
-    margin-top: 5%;
-    padding: 10px;
-    justify-content: flex-start;
-    margin: 0px;
-    padding: 0px;
-    border: 2px solid black;
+.menu-button-section {
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+    flex-basis: 80%;
+}
+
+.menu-button {
     border-radius: 5px;
+    height: 100px;
+    width: 100px;
+    padding: 0px;
+    font-weight: bold;
+    margin-right: 5px;
 }
 
-.image {
+.menu-button .image {
     height: 50px;
     width: 50px;
 }
 
-button {
-    border-radius: 5px;
-    height: 100px;
-    width: 150px;
-    margin: 5px;
-    padding: 0px;
-}
-
-button:hover {
+.menu-button:hover {
     background-color: seashell;
 }
