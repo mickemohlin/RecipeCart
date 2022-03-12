@@ -9,8 +9,10 @@
 </head>
 <body>
     <div class="title-section">
-        <img src="/assets/images/Shopping Cart Image.png" alt="Shopping Cart Image">
-        <h1 class="title">RecipeCart</h1>
+        <button class="home-button" onclick="homeButtonClicked()">
+            <img class="logo" src="/assets/images/Shopping Cart Image.png" alt="Shopping Cart Image">
+            <h1 class="title">RecipeCart</h1>
+        </button>
         <div class="menu-button-section">
             <button class="menu-button" id="recipes-button" onclick="recipesButtonClicked()">
                 <p>Recipes</p>
@@ -23,7 +25,19 @@
         </div>
     </div>
     <div class="main-content-section">
-   
+        <div class="welcome-section" id="welcome-section">
+            <h2>Hello and welcome to RecipeCart</h2>
+            <p>
+                Here you can view, create and update recipes. You can also create
+                grocery lists.
+            </p>
+        </div>
+        <div class="recipe-section" id ="recipe-section">
+            <h2>Recipes</h2>
+        </div>
+        <div class="grocery-section" id="grocery-section">
+            <h2>Groceries</h2>
+        </div>
     </div>
 </body>
 <script src="script.js"></script>

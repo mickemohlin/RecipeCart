@@ -7,14 +7,31 @@ body {
     display: flex;
     flex-direction: row;
     height: 150px;
-    background-color: darkred;
+    background-color: maroon;
+}
+
+.home-button {
+    background-color: maroon;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-button:hover {
+    cursor: pointer;
 }
 
 .title {
-    text-align: left;
-    margin-top: auto;
-    margin-bottom: auto;
     color: white;
+    margin: 0px;
+}
+
+.logo {
+    margin: 0px;
+    height: 100px;
+    width: 100px;
 }
 
 .menu-button-section {
@@ -25,6 +42,7 @@ body {
 }
 
 .menu-button {
+    border: none;
     border-radius: 5px;
     height: 100px;
     width: 100px;
@@ -39,5 +57,18 @@ body {
 }
 
 .menu-button:hover {
-    background-color: seashell;
+    background-color: cornsilk;
+    cursor: pointer;
+}
+
+.main-content-section {
+    text-align: center;
+}
+
+.recipe-section {
+    display: none;
+}
+
+.grocery-section {
+    display: none;
 }
