@@ -61,6 +61,10 @@ body {
     cursor: pointer;
 }
 
+.menu-button:active {
+    transform: translateY(4px);
+}
+
 .main-content-section {
     text-align: center;
 }
@@ -71,4 +75,10 @@ body {
 
 .grocery-section {
     display: none;
+}
+
+.added-groceries {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
