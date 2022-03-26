@@ -27,7 +27,7 @@ function displaySection(section) {
         case "grocery-section":
             document.getElementById("welcome-section").style.display = 'none';
             document.getElementById("recipe-section").style.display = 'none';
-            document.getElementById("grocery-section").style.display = 'block';
+            document.getElementById("grocery-section").style.display = 'inline-block';
             break;
         default:
             document.getElementById("welcome-section").style.display = 'block';
@@ -48,6 +48,9 @@ function fetchGroceryList() {
 
         // Fetch list and append new li element.
         let list = document.getElementById("added-groceries");
+        list.style.listStyleType = 'none';
+        list.style.textAlign = 'center';
+        list.style.paddingLeft = '0px';
         list.appendChild(li);
     }
 }
