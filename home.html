@@ -25,21 +25,26 @@
         </div>
     </div>
     <div class="main-content-section">
-        <div class="welcome-section" id="welcome-section">
+        <div class="home-page" id="home-page">
             <h2>Hello and welcome to RecipeCart</h2>
             <p>
                 Here you can view, create and update recipes. You can also create
                 grocery lists.
             </p>
         </div>
-        <div class="recipe-section" id ="recipe-section">
+        <div class="recipe-page" id ="recipe-page">
             <h2>Recipes</h2>
         </div>
-        <div class="grocery-section" id="grocery-section">
-            <h2>Grocery List</h2>
-            <ul id="added-groceries">
-            </ul>
-        </div>
+        <div class="grocery-page" id="grocery-page">
+            <div class="grocery-section" id="grocery-section">
+                <h2 class ="groceries-title" id="groceries-title">Grocery List</h2>
+                <ul id="added-groceries">
+                </ul>
+                <button class="add-grocery-button" id="add-grocery-button" onclick="addGrocery()">
+                    Resert Grocery List
+                </button>
+            </div>
+        </div>  
     </div>
 </body>
 <script src="grocery.js"></script>

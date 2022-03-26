@@ -69,13 +69,18 @@ body {
     text-align: center;
 }
 
-.recipe-section {
+.recipe-page {
+    display: none;
+}
+
+.grocery-page {
     display: none;
 }
 
 .grocery-section {
-    display: none;
+    padding: 5px;
     margin: 5px;
+    background-color: azure;
     border: 2px solid black;
     border-radius: 5px;
 }
@@ -83,4 +88,8 @@ body {
 .added-groceries {
     justify-content: center;
     text-align: center;
+}
+
+.add-grocery-button {
+    margin-bottom: 5px;
 }
