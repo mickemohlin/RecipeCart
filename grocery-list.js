@@ -6,7 +6,7 @@ class GroceryList {
     }
 
     getCreationDate() {
-        // TODO: format date before returning
+        // todo: format date before returning
         return this.date;
     }
 
