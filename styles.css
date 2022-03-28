@@ -69,12 +69,21 @@ body {
     text-align: center;
 }
 
+/* CSS for Recipe Page */
+
 .recipe-page {
     display: none;
 }
 
+
+/* CSS for Grocery Page */
 .grocery-page {
     display: none;
+}
+
+.grocery-list-section {
+    padding: 5px;
+    border: 1px solid black;
 }
 
 .grocery-section {
@@ -103,4 +112,32 @@ body {
 
 .add-grocery-button {
     margin-top: 5px;
+}
+
+.groceries-title {
+    border-bottom: 1px solid black;
+}
+
+.grocery-categories-section {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.grocery-category-button {
+    border: none;
+    border-radius: 5px;
+    height: 100px;
+    width: 100px;
+    padding: 0px;
+    font-weight: bold;
+}
+
+.grocery-category-button:hover {
+    cursor: pointer;
+}
+
+.grocery-category-button .image {
+    margin: 5px;
+    height: 50px;
+    width: 50px;
 }

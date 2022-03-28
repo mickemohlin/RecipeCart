@@ -36,17 +36,61 @@
             <h2>Recipes</h2>
         </div>
         <div class="grocery-page" id="grocery-page">
-            <div class="grocery-section" id="grocery-section">
-                <h2 class ="groceries-title" id="groceries-title">Grocery List</h2>
-                <ul id="added-groceries">
-                </ul>
+            <div class="grocery-list-section" id="grocery-list-section">
+                <div class="grocery-section" id="grocery-section">
+                    <h2 class ="groceries-title" id="groceries-title">Grocery List</h2>
+                    <ul id="added-groceries">
+                    </ul>
+                </div>
+                <div class="grocery-input-section" id="grocery-input-section">
+                    <label for="grocery-input">Grocery: </label>
+                    <input type="text" class="grocery-input" id="grocery-input" name="grocery-input">
+                    <br>
+                    <button class="add-grocery-button" id="add-grocery-button" onclick="addGrocery()">
+                        Add Grocery
+                    </button>
+                </div>
             </div>
-            <div class="grocery-input-section" id="grocery-input-section">
-                <label for="grocery-input">Grocery: </label>
-                <input type="text" class="grocery-input" id="grocery-input" name="grocery-input">
-                <br>
-                <button class="add-grocery-button" id="add-grocery-button" onclick="addGrocery()">
-                    Add Grocery
+            <div class="Grocery-categories-section" id="Grocery-categories-section">
+                <button class="grocery-category-button">
+                    Beverages
+                    <img src="/assets/images/beverages.png" class="image" alt="Beverages">
+                </button>
+                <button class="grocery-category-button">
+                    Bread/Bakery
+                    <img src="/assets/images/bread.png" class="image" alt="Bread">
+                </button>
+                <button class="grocery-category-button">
+                    Canned/Jarred Goods
+                    <img src="/assets/images/canned-fish.png" class="image" alt="Canned">
+                </button>
+                <button class="grocery-category-button">
+                    Dairy
+                    <img src="/assets/images/dairy-products.png" class="image" alt="Dairy">
+                </button>
+                <button class="grocery-category-button">
+                    Frozen Foods
+                    <img src="/assets/images/frozen-goods.png" class="image" alt="Frozen">
+                </button>
+                <button class="grocery-category-button">
+                    Meat
+                    <img src="/assets/images/meat-goods.png" class="image" alt="Meat">
+                </button>
+                <button class="grocery-category-button">
+                    Fruits/Vegetables
+                    <img src="/assets/images/fruits-and-vegetables.png" class="image" alt="Fruits and Veggies">
+                </button>
+                <button class="grocery-category-button">
+                    Cleaning
+                    <img src="/assets/images/cleaning.png" class="image" alt="Beverages">
+                </button>
+                <button class="grocery-category-button">
+                    Paper Goods
+                    <img src="/assets/images/paper-goods.jpg" class="image" alt="Beverages">
+                </button>
+                <button class="grocery-category-button">
+                    Other
+                    <img src="/assets/images/other-goods.png" class="image" alt="Beverages">
                 </button>
             </div>
         </div>  
