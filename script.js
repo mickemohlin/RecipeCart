@@ -41,11 +41,20 @@ function fetchGroceryList() {
 
     for(let i=0; i < groceries.length; i++) {
 
-        // Fetch name of grocery and append to new li element.
+        // Fetch name of grocery in the current iteration.
         let grocery = groceries[i].getName();
-        let li = document.createElement("li");
+
+        // Create text and input elements for the grocery.
+        let itemText = document.createTextNode(grocery);
+        let item = document.createElement('input');
+        item.setAttribute("type", "checkbox");
+        item.appendChild(itemText);
+
+        // Create li element and append input text and input element.
+        let li = document.createElement('li');
         li.style.margin = '0px';
-        li.innerText = grocery;
+        li.appendChild(item);
+        li.appendChild(itemText);
 
         // Fetch list and append new li element.
         let list = document.getElementById("added-groceries");
