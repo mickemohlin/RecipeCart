@@ -171,3 +171,24 @@ body {
     height: 50%;
     width: 50%;
 }
+
+.selected-categories-grocery-list {
+    list-style-type: none;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.grocery {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+
+.grocery:hover {
+    background-color: cornsilk;
+    cursor: pointer;
+}

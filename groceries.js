@@ -43,14 +43,33 @@ function displayCategory(categoryName, category) {
     title.innerText = categoryName;
 
     resetSelectedCategory();
+
+    // Fetch ul element and configure the visual appearance.
     let ul = document.getElementById("selected-categories");
+    ul.classList.add("selected-categories-grocery-list");
     
     for(let i=0; i<grocerySupply.length; i++) {
         if(category == grocerySupply[i].getCategory()) {
+
+            // Create li element and configure its visual appearance.
             let li = document.createElement("li");
-            let text = document.createTextNode(grocerySupply[i].getName()); 
-            li.appendChild(text);
-            ul.appendChild(li);
+            li.classList.add("grocery");
+
+            // Fetch name from current grocery in the iteration and append to the li element.
+            let textNode = document.createTextNode(grocerySupply[i].getName()); 
+
+            let btn = document.createElement('button');
+            btn.classList.add("grocery");
+
+            btn.onclick = function() {
+                let selectedGrocery = this.innerText;
+                myList.addGrocery(new Grocery(selectedGrocery));
+                updateGroceryList();
+            }
+
+            btn.appendChild(textNode);
+
+            ul.appendChild(btn);
         }
     }
 }
