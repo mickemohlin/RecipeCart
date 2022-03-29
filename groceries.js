@@ -42,7 +42,7 @@ function displayCategory(categoryName, category) {
     let title = document.getElementById("selected-category-title");
     title.innerText = categoryName;
 
-    resetSelectedCategory();
+    resetSelectedCategory(); // To remove previously shown groceries.
 
     // Fetch ul element and configure the visual appearance.
     let ul = document.getElementById("selected-categories");
@@ -60,14 +60,13 @@ function displayCategory(categoryName, category) {
 
             let btn = document.createElement('button');
             btn.classList.add("grocery");
+            btn.appendChild(textNode);
 
             btn.onclick = function() {
                 let selectedGrocery = this.innerText;
                 myList.addGrocery(new Grocery(selectedGrocery));
                 updateGroceryList();
-            }
-
-            btn.appendChild(textNode);
+            } 
 
             ul.appendChild(btn);
         }

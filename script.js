@@ -1,9 +1,4 @@
 var myList = new GroceryList();
-myList.addGrocery(new Grocery("milk"));
-myList.addGrocery(new Grocery("cookies"));
-myList.addGrocery(new Grocery("bread"));
-myList.addGrocery(new Grocery("coffee"));
-fetchGroceryList();
 
 function homeButtonClicked() {
     displaySection("home-page");
@@ -72,20 +67,13 @@ function fetchGroceryList() {
 
         // Create li element and append input text and input element.
         let li = document.createElement('li');
-        li.style.margin = '2px';
-        li.style.display = 'inline-flex';
-        li.style.flexDirection = 'row';
-        li.style.alignItems = 'center';
+        li.classList.add("added-grocery-item");
         li.appendChild(item);
         li.appendChild(itemText);
 
         // Fetch list and append new li element.
         let list = document.getElementById("added-groceries");
-        list.style.listStyleType = 'none';
-        list.style.paddingLeft = '25%';
-        list.style.display = 'flex';
-        list.style.flexDirection = 'column';
-        list.style.alignItems = 'flex-start';
+        list.classList.add("added-groceries");
         list.appendChild(li);
     }
 }
