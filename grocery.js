@@ -1,14 +1,14 @@
 class Grocery {
-    constructor(name) {
+    constructor(name, category) {
         this.name = name;
-        this.isChecked = false;
+        this.category = category;
     }
 
     getName() {
         return this.name;
     }
 
-    getIfChecked() {
-        return this.isChecked;
+    getCategory() {
+        return this.category;
     }
 }

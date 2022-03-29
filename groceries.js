@@ -1,40 +1,45 @@
 function showBeverages() {
-    console.log("showBeverages");
+    displayCategory("Beverages");
 }
 
 function showBreadAndBakery() {
-    console.log("showBreadAndBakery");
+    displayCategory("Bread/Bakery");
 }
 
 function showCannedAndJarred() {
-    console.log("showCannedAndJarred");
+    displayCategory("Canned/Jarred Goods");
 }
 
 function showDairyProducts() {
-    console.log("showDairyProducts");
+    displayCategory("Dairy Products");
 }
 
 function showFrozenFoods() {
-    console.log("showFrozenFoods");
+    displayCategory("Frozen Foods");
 }
 
 function showMeatProducts() {
-    console.log("showMeatProducts");
+    displayCategory("Meat");
 }
 
 function showFruitsAndVeggies() {
-    console.log("showFruitsAndVeggies");
+    displayCategory("Fruits and Vegetables");
 }
 
 function showCleaningProducts() {
-    console.log("showCleaningProducts");
+    displayCategory("Cleaning Products");
 }
 
 function showPaperGoods() {
-    console.log("showPaperGoods");
+    displayCategory("Paper Goods");
 }
 
-function showOther() {
-    console.log("showOther");
+function showAllCategories() {
+    displayCategory("All Categories");
+}
+
+function displayCategory(category) {
+    let categoryTitle = document.getElementById("selected-category-title");
+    categoryTitle.innerText = category;
 }
 

@@ -55,7 +55,7 @@ function displaySection(section) {
 
 function fetchGroceryList() {
     console.log("fetching groceries...");
-    var groceries = myList.getGroceries()
+    var groceries = myList.getGroceries();
 
     for(let i=0; i < groceries.length; i++) {
 
