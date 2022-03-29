@@ -7,12 +7,13 @@ body {
     display: flex;
     flex-direction: row;
     height: 150px;
-    background-color: maroon;
+    background-color: darkcyan;
 }
 
 .home-button {
-    background-color: maroon;
+    background-color: darkcyan;
     border: none;
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,8 +83,9 @@ body {
 }
 
 .grocery-list-section {
-    padding: 5px;
-    border: 1px solid black;
+    padding: 0px;
+    align-self: flex-start;
+    
 }
 
 .grocery-section {
@@ -119,25 +121,39 @@ body {
 }
 
 .grocery-categories-section {
+    display: flex;
+    flex-grow: 2;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 5px;
-    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
 }
 
 .grocery-category-button {
-    border: none;
+    border: 1px groove black;
+    background-color: azure;
     border-radius: 5px;
     height: 100px;
     width: 100px;
-    padding: 0px;
+    padding: 10px;
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .grocery-category-button:hover {
     cursor: pointer;
+    background-color: cornsilk;
+}
+
+.grocery-category-button:active {
+    transform: translateY(4px);
 }
 
 .grocery-category-button .image {
-    margin: 5px;
-    height: 50px;
-    width: 50px;
+    height: 50%;
+    width: 50%;
 }

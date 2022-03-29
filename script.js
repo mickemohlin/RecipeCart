@@ -43,7 +43,7 @@ function displaySection(section) {
         case "grocery-page":
             document.getElementById("home-page").style.display = 'none';
             document.getElementById("recipe-page").style.display = 'none';
-            document.getElementById("grocery-page").style.display = 'inline-flex';
+            document.getElementById("grocery-page").style.display = 'flex';
             break;
         default:
             document.getElementById("home-page").style.display = 'block';
