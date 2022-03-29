@@ -33,6 +33,7 @@ function updateGroceryList() {
     fetchGroceryList();
 }
 
+// Shows the the selected page
 function displaySection(section) {
     switch(section) {
         case "recipe-page":
