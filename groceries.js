@@ -1,45 +1,65 @@
 function showBeverages() {
-    displayCategory("Beverages");
+    displayCategory("Beverages", GroceryCategory.Beverages);
 }
 
 function showBreadAndBakery() {
-    displayCategory("Bread/Bakery");
+    displayCategory("Bread/Bakery", GroceryCategory.BreadAndBakery);
 }
 
 function showCannedAndJarred() {
-    displayCategory("Canned/Jarred Goods");
+    displayCategory("Canned/Jarred Goods", GroceryCategory.CannedAndJarredGoods);
 }
 
 function showDairyProducts() {
-    displayCategory("Dairy Products");
+    displayCategory("Dairy Products", GroceryCategory.DairyProducts);
 }
 
 function showFrozenFoods() {
-    displayCategory("Frozen Foods");
+    displayCategory("Frozen Foods", GroceryCategory.FrozenFoods);
 }
 
 function showMeatProducts() {
-    displayCategory("Meat");
+    displayCategory("Meat", GroceryCategory.Meat);
 }
 
 function showFruitsAndVeggies() {
-    displayCategory("Fruits and Vegetables");
+    displayCategory("Fruits and Vegetables", GroceryCategory.FruitsAndVegetables);
 }
 
 function showCleaningProducts() {
-    displayCategory("Cleaning Products");
+    displayCategory("Cleaning Products", GroceryCategory.CleaningProducts);
 }
 
 function showPaperGoods() {
-    displayCategory("Paper Goods");
+    displayCategory("Paper Goods", GroceryCategory.PaperGoods);
 }
 
 function showAllCategories() {
-    displayCategory("All Categories");
+    displayCategory("All Categories", GroceryCategory.AllCategories);
 }
 
-function displayCategory(category) {
-    let categoryTitle = document.getElementById("selected-category-title");
-    categoryTitle.innerText = category;
+function displayCategory(categoryName, category) {
+    let title = document.getElementById("selected-category-title");
+    title.innerText = categoryName;
+
+    resetSelectedCategory();
+    let ul = document.getElementById("selected-categories");
+    
+    for(let i=0; i<grocerySupply.length; i++) {
+        if(category == grocerySupply[i].getCategory()) {
+            let li = document.createElement("li");
+            let text = document.createTextNode(grocerySupply[i].getName()); 
+            li.appendChild(text);
+            ul.appendChild(li);
+        }
+    }
+}
+
+function resetSelectedCategory() {
+    let ul = document.getElementById("selected-categories");
+
+    while(ul.firstChild) {
+        ul.removeChild(ul.firstChild);
+    }
 }
 
