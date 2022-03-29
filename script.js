@@ -37,7 +37,7 @@ function displaySection(section) {
     switch(section) {
         case "recipe-page":
             document.getElementById("home-page").style.display = 'none';
-            document.getElementById("recipe-page").style.display = 'block';
+            document.getElementById("recipe-page").style.display = 'flex';
             document.getElementById("grocery-page").style.display = 'none';
             break;
         case "grocery-page":
@@ -46,15 +46,14 @@ function displaySection(section) {
             document.getElementById("grocery-page").style.display = 'flex';
             break;
         default:
-            document.getElementById("home-page").style.display = 'block';
+            document.getElementById("home-page").style.display = 'flex';
             document.getElementById("recipe-page").style.display = 'none';
             document.getElementById("grocery-page").style.display = 'none';
     }
 }
 
 function fetchGroceryList() {
-    console.log("fetching...")
-
+    console.log("fetching groceries...");
     var groceries = myList.getGroceries()
 
     for(let i=0; i < groceries.length; i++) {

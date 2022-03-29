@@ -19,38 +19,35 @@
                 <img src="/assets/images/Recipe Book Image.png" alt="Recipe Book Image" class="image">
             </button>
             <button class="menu-button" id="shopping-list-button" onclick="shoppingListButtonClicked()">
-                <p>Grocery List</p>
+                <p>Groceries</p>
                 <img src="/assets/images/Shopping List Image.png" alt="Shopping List Image" class="image">
             </button> 
         </div>
     </div>
     <div class="main-content-section">
+        <div class="grocery-list-section" id="grocery-list-section">
+            <div class="grocery-section" id="grocery-section">
+                <h2 class ="groceries-title" id="groceries-title">Grocery List</h2>
+                <ul id="added-groceries">
+                </ul>
+            </div>
+            <div class="grocery-input-section" id="grocery-input-section">
+                <label for="grocery-input">Custom Grocery: </label>
+                <input type="text" class="grocery-input" id="grocery-input" name="grocery-input">
+                <br>
+                <button class="add-grocery-button" id="add-grocery-button" onclick="addGrocery()">
+                    Add Grocery
+                </button>
+            </div>
+        </div>
         <div class="home-page" id="home-page">
-            <h2>Hello and welcome to RecipeCart</h2>
-            <p>
-                Here you can view, create and update recipes. You can also create
-                grocery lists.
-            </p>
+            <h2>Home Page</h2>
         </div>
         <div class="recipe-page" id ="recipe-page">
             <h2>Recipes</h2>
         </div>
         <div class="grocery-page" id="grocery-page">
-            <div class="grocery-list-section" id="grocery-list-section">
-                <div class="grocery-section" id="grocery-section">
-                    <h2 class ="groceries-title" id="groceries-title">Grocery List</h2>
-                    <ul id="added-groceries">
-                    </ul>
-                </div>
-                <div class="grocery-input-section" id="grocery-input-section">
-                    <label for="grocery-input">Grocery: </label>
-                    <input type="text" class="grocery-input" id="grocery-input" name="grocery-input">
-                    <br>
-                    <button class="add-grocery-button" id="add-grocery-button" onclick="addGrocery()">
-                        Add Grocery
-                    </button>
-                </div>
-            </div>
+            <h2>Groceries</h2>
             <div class="grocery-categories-section" id="grocery-categories-section">
                 <button class="grocery-category-button">
                     <p>Beverages</p>

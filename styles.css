@@ -3,6 +3,7 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* CSS for title section */
 .title-section {
     display: flex;
     flex-direction: row;
@@ -66,26 +67,23 @@ body {
     transform: translateY(4px);
 }
 
+/* CSS for main content and home page */
 .main-content-section {
     text-align: center;
+    display: flex;
 }
 
-/* CSS for Recipe Page */
-
-.recipe-page {
-    display: none;
+.home-page {
+    display: flex;
+    flex-grow: 2;
+    align-items: center;
+    justify-content: center;
 }
 
-
-/* CSS for Grocery Page */
-.grocery-page {
-    display: none;
-}
-
+/* CSS for grocery list */
 .grocery-list-section {
     padding: 0px;
     align-self: flex-start;
-    
 }
 
 .grocery-section {
@@ -103,6 +101,7 @@ body {
 
 .add-grocery-button {
     margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .grocery-input-section {
@@ -112,12 +111,26 @@ body {
     padding: 5px;
 }
 
-.add-grocery-button {
-    margin-top: 5px;
-}
-
 .groceries-title {
     border-bottom: 1px solid black;
+}
+
+/* CSS for recipe page */
+.recipe-page {
+    display: none;
+    flex-grow: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* CSS for grocery page */
+.grocery-page {
+    display: none;
+    flex-grow: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .grocery-categories-section {
