@@ -10,6 +10,7 @@ function recipesButtonClicked() {
 
 function shoppingListButtonClicked() {
     displaySection("grocery-page");
+    showAllCategories();
 }
 
 function addGrocery() {

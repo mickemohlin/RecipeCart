@@ -86,6 +86,8 @@ body {
 .grocery-list-section {
     padding: 0px;
     align-self: flex-start;
+    width: 300px;
+    min-width: 300px;
 }
 
 .grocery-section {
@@ -124,10 +126,18 @@ body {
 }
 
 .added-grocery-item {
-    margin: 2.5px;
-    display: block;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: baseline;
+    display: flex;
+    border: none;
+    border-radius: 3px;
     flex-direction: row;
-    align-items: center;
+}
+
+.added-grocery-item:hover {
+    background-color: silver;
+    cursor: pointer;
 }
 
 /* CSS for recipe page */
@@ -191,6 +201,9 @@ body {
     padding-left: 0px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
 }
 
 .grocery {
@@ -199,7 +212,6 @@ body {
     padding: 5px;
     border: 1px solid black;
     border-radius: 5px;
-
 }
 
 .grocery:hover {
