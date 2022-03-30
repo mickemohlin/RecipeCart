@@ -1,3 +1,8 @@
+const MIN_INPUT_SIZE = 3;
+const MAX_INPUT_SIZE = 20;
+const INPUT_TO_SHORT_ERROR_MESSAGE = "Varans namn måste innehålla minst " + MIN_INPUT_SIZE + " bokstäver";
+const INPUT_TO_LONG_ERROR_MESSAGE = "Varans namn kan högst innehålla " + MAX_INPUT_SIZE + " bokstäver";
+
 var myList = new GroceryList();
 
 function homeButtonClicked() {
@@ -14,10 +19,31 @@ function shoppingListButtonClicked() {
 }
 
 function addGrocery() {
-    let groceryName = document.getElementById('grocery-input');
-    myList.addGrocery(new Grocery(groceryName.value));
-    updateGroceryList();
-    groceryName.value = '';
+    let input = document.getElementById('grocery-input');
+
+    if(checkInputConstraints(input.value)){
+        myList.addGrocery(new Grocery(input.value));
+        updateGroceryList();
+        
+    }
+
+    input.value = ''; // Reset value of input field.
+}
+
+function checkInputConstraints(input) {
+    if(input.length < MIN_INPUT_SIZE) {
+        displayErrorMessage(INPUT_TO_SHORT_ERROR_MESSAGE);
+        return false;
+    } else if (MAX_INPUT_SIZE < input.length) {
+        displayErrorMessage(INPUT_TO_LONG_ERROR_MESSAGE);
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function displayErrorMessage(errorMessage) {
+    console.log(errorMessage);
 }
 
 function updateGroceryList() {

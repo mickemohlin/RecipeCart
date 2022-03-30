@@ -1,41 +1,41 @@
 function showBeverages() {
-    displayCategory("Beverages", GroceryCategory.Beverages);
+    displayCategory("Drycker", GroceryCategory.Beverages);
 }
 
 function showBreadAndBakery() {
-    displayCategory("Bread/Bakery", GroceryCategory.BreadAndBakery);
+    displayCategory("Bröd & Bak", GroceryCategory.BreadAndBakery);
 }
 
 function showCannedAndJarred() {
-    displayCategory("Canned/Jarred Goods", GroceryCategory.CannedAndJarredGoods);
+    displayCategory("Konserver", GroceryCategory.CannedAndJarredGoods);
 }
 
 function showDairyProducts() {
-    displayCategory("Dairy Products", GroceryCategory.DairyProducts);
+    displayCategory("Mjölkprodukter", GroceryCategory.DairyProducts);
 }
 
 function showFrozenFoods() {
-    displayCategory("Frozen Foods", GroceryCategory.FrozenFoods);
+    displayCategory("Fruset", GroceryCategory.FrozenFoods);
 }
 
 function showMeatProducts() {
-    displayCategory("Meat", GroceryCategory.Meat);
+    displayCategory("Kött/Fisk/Kyckling", GroceryCategory.Meat);
 }
 
 function showFruitsAndVeggies() {
-    displayCategory("Fruits and Vegetables", GroceryCategory.FruitsAndVegetables);
+    displayCategory("Frukt & Grönt", GroceryCategory.FruitsAndVegetables);
 }
 
 function showCleaningProducts() {
-    displayCategory("Cleaning Products", GroceryCategory.CleaningProducts);
+    displayCategory("Städning", GroceryCategory.CleaningProducts);
 }
 
 function showPaperGoods() {
-    displayCategory("Paper Goods", GroceryCategory.PaperGoods);
+    displayCategory("Papper", GroceryCategory.PaperGoods);
 }
 
 function showAllCategories() {
-    displayCategory("All Categories", GroceryCategory.AllCategories);
+    displayCategory("Alla Kategorier", GroceryCategory.AllCategories);
 }
 
 function displayCategory(categoryName, category) {

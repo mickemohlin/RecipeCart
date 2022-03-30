@@ -73,6 +73,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    margin-top: 10px;
 }
 
 .home-page {
@@ -180,6 +181,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.grocery-category-button p {
+    font-size: smaller;
 }
 
 .grocery-category-button:hover {
