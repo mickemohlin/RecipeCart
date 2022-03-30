@@ -149,6 +149,10 @@ body {
     justify-content: center;
 }
 
+.recipe-page h2 {
+    margin: 0px;
+}
+
 
 /* CSS for grocery page */
 .grocery-page {
@@ -159,14 +163,20 @@ body {
     justify-content: center;
 }
 
+.grocery-page h2 {
+    margin: 0px;
+}
+
 .grocery-categories-section {
     display: inline-flex;
     flex-grow: 2;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 5px;
     align-items: flex-start;
     justify-content: center;
+    border-bottom: 1px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .grocery-category-button {
@@ -209,6 +219,10 @@ body {
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
+}
+
+.selected-category-title {
+    margin: 20px;
 }
 
 .grocery {

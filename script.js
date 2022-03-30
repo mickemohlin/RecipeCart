@@ -19,15 +19,15 @@ function shoppingListButtonClicked() {
 }
 
 function addGrocery() {
-    let input = document.getElementById('grocery-input');
+    let nameInput = document.getElementById('grocery-input');
 
-    if(checkInputConstraints(input.value)){
-        myList.addGrocery(new Grocery(input.value));
+    if(checkInputConstraints(nameInput.value)){
+        myList.addGrocery(new Grocery(nameInput.value));
         updateGroceryList();
-        
     }
 
-    input.value = ''; // Reset value of input field.
+    // Reset input fields.
+    nameInput.value = ''; 
 }
 
 function checkInputConstraints(input) {
