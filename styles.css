@@ -84,7 +84,7 @@ body {
 }
 
 /* CSS for grocery list */
-.grocery-list-section {
+.shopping-list-section {
     padding: 0px;
     align-self: flex-start;
     width: 300px;
@@ -94,7 +94,7 @@ body {
 .grocery-section {
     padding: 10px;
     margin: 5px;
-    background-color: floralwhite;
+    background-color: cornsilk;
     border: 2px solid black;
     border-radius: 5px;
 }

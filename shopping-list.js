@@ -1,4 +1,4 @@
-class GroceryList {
+class ShoppingList {
     constructor() {
         this.date = Date.now();
         this.groceries = [];

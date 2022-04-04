@@ -3,7 +3,7 @@ const MAX_INPUT_SIZE = 20;
 const INPUT_TO_SHORT_ERROR_MESSAGE = "Varans namn måste innehålla minst " + MIN_INPUT_SIZE + " bokstäver";
 const INPUT_TO_LONG_ERROR_MESSAGE = "Varans namn kan högst innehålla " + MAX_INPUT_SIZE + " bokstäver";
 
-var myList = new GroceryList();
+var myList = new ShoppingList();
 
 function homeButtonClicked() {
     displaySection("home-page");
