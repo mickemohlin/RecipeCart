@@ -56,16 +56,17 @@ function displayCategory(categoryName, category) {
         li.classList.add("grocery");
 
         // Fetch name from current grocery in the iteration and append to the li element.
-        let textNode = document.createTextNode(selectedGroceries[i].getName()); 
+        let selectedGrocery = selectedGroceries[i];
+        let textNode = document.createTextNode(selectedGrocery.name); 
 
         let btn = document.createElement('button');
         btn.classList.add("grocery");
         btn.appendChild(textNode);
 
         btn.onclick = function() {
-            let selectedGrocery = this.innerText;
-            myList.addGrocery(new Grocery(selectedGrocery));
-            updateGroceryList();
+            console.log(selectedGrocery.unit.name);
+            myList.addToShoppingList(new Grocery(selectedGrocery.name, selectedGrocery.category, selectedGrocery.unit), 1);
+            updateShoppingList();
         } 
 
         ul.appendChild(btn);

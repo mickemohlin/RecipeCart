@@ -20,14 +20,17 @@ function shoppingListButtonClicked() {
 
 function addGrocery() {
     let nameInput = document.getElementById('grocery-input');
+    let quantityInput = document.getElementById('quantity-input');
+    let unitInput = document.getElementById('unit-input');
 
     if(checkInputConstraints(nameInput.value)){
-        myList.addGrocery(new Grocery(nameInput.value));
-        updateGroceryList();
+        myList.addToShoppingList(new Grocery(nameInput.value, undefined, unitInput.value), quantityInput.value);
+        updateShoppingList();
     }
 
-    // Reset input fields.
-    nameInput.value = ''; 
+    // Reset grocery input fields.
+    nameInput.value = '';  
+    quantityInput.value = ''
 }
 
 function checkInputConstraints(input) {
@@ -46,13 +49,13 @@ function displayErrorMessage(errorMessage) {
     console.log(errorMessage);
 }
 
-function updateGroceryList() {
+function updateShoppingList() {
     let list = document.getElementById("added-groceries");
     while(list.firstChild) {
         list.removeChild(list.firstChild);
     }
 
-    fetchGroceryList();
+    fetchShoppingList();
 }
 
 // Shows the the selected page
@@ -75,32 +78,43 @@ function displaySection(section) {
     }
 }
 
-function fetchGroceryList() {
+function fetchShoppingList() {
     var groceries = myList.getGroceries();
 
     for(let i=0; i < groceries.length; i++) {
 
-        // Fetch name of grocery in the current iteration.
-        let grocery = groceries[i].getName();
+        
+        let groceryItem = groceries[i]; // Fetch current grocery in the iteration.
+        let grocery = groceryItem.grocery;
+        let quantity = groceryItem.quantity;
 
-        // Create text and input elements for the grocery.
-        let itemText = document.createTextNode(grocery);
+        console.log(grocery);
+
         let itemLabel = document.createElement('label');
-        itemLabel.appendChild(itemText);
+        itemLabel.innerText = grocery.name;
 
-        let item = document.createElement('input');
-        item.setAttribute("type", "checkbox");
-        item.appendChild(itemLabel);
+        let checkbox = document.createElement('input');
+        checkbox.setAttribute("type", "checkbox");
+        checkbox.classList.add('item-checkbox');
+
+        let itemDiv = document.createElement('div');
+        itemDiv.appendChild(checkbox);
+        itemDiv.appendChild(itemLabel);
+
+        // Create unit and quantity text node
+        let unitQuantity = document.createElement('label');
+        unitQuantity.innerText = "x " + quantity;
+        unitQuantity.classList.add('added-grocery-unit-quantity');
 
         // Create li element and append input text and input element.
-        let li = document.createElement('li');
-        li.classList.add("added-grocery-item");
-        li.appendChild(item);
-        li.appendChild(itemText);
+        let item = document.createElement('li');
+        item.classList.add("added-grocery-item");
+        item.appendChild(itemDiv);
+        item.appendChild(unitQuantity);
 
         // Fetch list and append new li element.
         let list = document.getElementById("added-groceries");
         list.classList.add("added-groceries");
-        list.appendChild(li);
+        list.appendChild(item);
     }
 }

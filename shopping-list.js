@@ -9,7 +9,13 @@ class ShoppingList {
         return this.groceries;
     }
 
-    addGrocery(grocery) {
-        this.groceries.push(grocery);
+    addToShoppingList(addedGrocery, addedQuantity) {
+
+        let newGrocery = {
+            grocery: addedGrocery,
+            quantity: addedQuantity,
+        }
+
+        this.groceries.push(newGrocery);
     }
 }

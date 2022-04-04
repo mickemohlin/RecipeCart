@@ -1,7 +1,8 @@
 class Grocery {
-    constructor(name, category) {
+    constructor(name, category, unit) {
         this.name = name;
         this.category = category;
+        this.unit = unit;
     }
 
     getName() {
@@ -10,5 +11,9 @@ class Grocery {
 
     getCategory() {
         return this.category;
+    }
+
+    getUnit() {
+        return this.unit;
     }
 }
